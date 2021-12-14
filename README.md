@@ -18,18 +18,16 @@ SMTP2GO PHP Library for Codeigniter 3
 		$template_data 	= [
 			"username" 			=> 'aahadr',
 			"password" 			=> '123456',
-			"product_name" 		=> 'One RIch Vision',
-			"login_url" 		=> 'https://onerichvision.com',
-			"guide_url" 		=> 'https://onerichvision.com',
-			"support_email" 	=> 'onerichvision@gmail.com',
-			"sender_name" 		=> 'One Rich Vision',
+			"product_name" 		=> 'Nama Perusahaan',
+			"login_url" 		=> 'https://domain_anda.com',
+			"guide_url" 		=> 'https://domain_anda.com',
+			"support_email" 	=> 'support@domain.com',
+			"sender_name" 		=> 'Nama Perusahaan',
 		];
 
 		$email 	= new Smtp2GO();
-		// $email->setApi_code('api-A4996FC05C0611ECA34BF23C91C88F4E');
-		// $email->setTo('kawoel@gmail.com', 'Ayatulloh Ahad R');
-		$email->setTo('support@onerichvision.com', 'Support One Rich');
-		$email->setSender('system@onerichvision.com', 'One Rich Vision');
+		$email->setTo('kawoel@gmail.com', 'Ayatulloh Ahad R');
+		$email->setSender('sender@example.com', 'Nama Pengirim');
 		$email->setTemplateID('6799681');
 		$email->setTemplateData($template_data);
 		$result 	= $email->sendWithTemplate();
